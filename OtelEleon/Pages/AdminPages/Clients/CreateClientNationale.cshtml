@@ -1,0 +1,74 @@
+﻿@page
+@model OtelEleon.Pages.AdminPages.Clients.CreateClientNationaleModel
+@{
+}
+<body style="background: linear-gradient( rgba(217, 253, 141, 0.9), rgba(184, 150, 205, 0.29)); background-repeat: no-repeat;
+    background-attachment: fixed;">
+    <div class="h-100">
+        <div class="mask d-flex align-items-center h-100">
+            <div class="container">
+                <div class="row justify-content-center p-5">
+                    <div class="col-5 text-center" style="background-color: rgba(255, 255, 255, 0);">
+                        <h1 style="margin-top:100px;">Регистрация</h1>
+                        <div class="card shadow-2-strong" style="background-color: rgba(0, 0, 0, 0); border:none">
+                            <div class="card-body">
+                                <form id="account" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="row">
+                                        <a>Серия и номер паспорта</a>
+                                        <div class="col-sm ">
+                                            <input class="form-control" type="text" id="Serias" style="border-radius: 20px;" name="Passport.Serias" maxlength="4" placeholder="Серия(4 цифр)" required pattern="\d{4}">
+
+                                        </div>
+                                        <div class="col-sm">
+                                            <input class="form-control" type="text" id="Number" style="border-radius: 20px;" name="Passport.Number" maxlength="6" placeholder="Номер(6 цифр)" required pattern="\d{6}">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="Passport.TypeDocument" type="text" class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="Passport.TypeDocument" class="form-label">Вид документа</label>
+                                    </div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="Passport.DateIssued" type="date" class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="Passport.DateIssued" class="form-label">Выдан</label>
+                                    </div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="Passport.Adress" type="text"  class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="Passport.Adress" class="form-label">Адрес</label>
+                                    </div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="Passport.Country" type="text" class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="Passport.Country" class="form-label">Страна выдачи</label>
+                                    </div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="Client.FullName" type="text" class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="Client.FullName" class="form-label">Фамилия</label>
+                                    </div>
+                                    
+                                    <div class="form-floating" style="margin:10px">
+                                        <select asp-for="Client.Gender" class="form-control" style="border-radius: 20px;">
+                                            <option value="" disabled selected>Выберите пол</option>
+                                            <option value="Мужской">Мужской</option>
+                                            <option value="Женский">Женский</option>
+                                        </select>
+                                        <label asp-for="Client.Gender" class="form-label">Пол</label>
+                                    </div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="Client.DateOfBirth" type="date" class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="Client.DateOfBirth" class="form-label">Дата рождения</label>
+                                    </div>
+                                    <div style="margin:10px; border-radius:20px">
+                                        <button id="register-submit" type="submit" class="btn btn-outline-dark" style="width:200px;">
+                                            Зарегистрироваться
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,30 @@
+﻿@page
+@model OtelEleon.Pages.AdminPages.Clients.CreateClientForeignModel
+@{
+}
+<body style="background: linear-gradient( rgba(217, 253, 141, 0.9), rgba(184, 150, 205, 0.29)); background-repeat: no-repeat;
+    background-attachment: fixed;">
+    <div class="h-100">
+        <div class="mask d-flex align-items-center h-100">
+            <div class="container">
+                <div class="row justify-content-center p-5">
+                    <div class="col-5 text-center" style="background-color: rgba(255, 255, 255, 0);">
+                        <h1 style="margin-top:100px;">Регистрация</h1>
+                        <div class="card shadow-2-strong" style="background-color: rgba(0, 0, 0, 0); border:none">
+                            <div class="card-body">
+                                <form id="account" method="post"> 
+                                    <h1>Ты даже не ГРАЖДАНИН!!!</h1>
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-floating" style="margin:10px">
+                                        <input asp-for="MigrateCart.Number" class="form-control" placeholder=" " style="border-radius: 20px;" onclick="IsMi" />
+                                        <label asp-for="MigrateCart.Number" class="form-label">не паспорт</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

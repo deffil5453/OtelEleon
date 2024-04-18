@@ -1,0 +1,52 @@
+﻿@page
+
+@model RegisterModel
+@{
+}
+
+<body style="background: linear-gradient( rgba(217, 253, 141, 0.9), rgba(184, 150, 205, 0.29)); background-repeat: no-repeat;
+    background-attachment: fixed;">
+	<div class="h-100">
+		<div class="mask d-flex align-items-center h-100">
+			<div class="container">
+				<div class="row justify-content-center p-5">
+					<div class="col-5 text-center" style="background-color: rgba(255, 255, 255, 0);">
+						<h1 style="margin-top:100px;">Регистрация</h1>
+						<div class="card shadow-2-strong" style="background-color: rgba(0, 0, 0, 0); border:none">
+							<div class="card-body">
+								<form id="account" method="post">
+									<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+									
+									<div class="col form-floating" style="margin:10px">
+										<input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="Login" style="border-radius: 20px;" />
+										<label asp-for="Input.UserName" class="form-label">Логин</label>
+									</div>
+									<div class="form-floating" style="margin:10px">
+										<input asp-for="Input.Password" class="form-control" autocomplete="password" aria-required="true" placeholder="Password" style="border-radius: 20px;" />
+										<label asp-for="Input.Password" class="form-label">Пароль</label>
+									</div>
+									<div style="margin:10px; border-radius:20px">
+										<button id="login-submit" type="submit" class="btn btn-outline-dark" style="width:200px;">
+											Зарегистрироваться
+										</button>
+									</div>
+									<div style="margin:10px">
+										<a href="Login" style="color:black">авторизоваться</a>
+									</div>
+
+									<div style="margin:10px">
+										<a href="~/Index">вернуться на главную</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
